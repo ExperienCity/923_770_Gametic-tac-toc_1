@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta property="og:site_name" content="ExperienCity" />
+		<meta property="og:type" content="website" />
+		<meta property="og:image" content="" />
+		<meta property="og:title" content="" />
+		<meta property="og:description" content="" />
+        <title>
+        </title>		
+		
+		<!--<link rel="stylesheet" href="http://uat.experiencity.co/css/jquery.mobile-1.3.1.css" />
+        <link rel="stylesheet" href="http://uat.experiencity.co/css/isotope.css" />
+        <link rel="stylesheet" href="http://uat.experiencity.co/css/my.css" />
+
+        <script src="http://uat.experiencity.co/js/jquery.min.js"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.13&amp;libraries=places&amp;sensor=false&libraries=geometry"></script>
+        <script src="http://uat.experiencity.co/js/jquery.mobile-1.3.1.min.js"></script>
+        <script src="http://uat.experiencity.co/js/jquery.isotope.min.js"></script>
+		
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/Convexhull.js"></script>
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/Shape.js"></script> 
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/ShapeMarkersHelper.js"></script> 
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/googleMapsExtensions.js"></script>
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/Line.js"></script>
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/Circle.js"></script>
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/Rectangle.js"></script>
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/Label.js"></script>
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/Polygon.js"></script>
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/Scribble.js"></script>
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/ToolManager.js"></script>
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/GlobalOptions.js"></script>
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/jsonStringify.js"></script>
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/DataManagmentHelper.js"></script>
+		<script type="text/javascript" src="http://uat.experiencity.co/js/scriptsDraw/staticMathMethods.js"></script>
+		<script type="text/javascript" src="http://uat.experiencity.co/js/userCustomOverlay.js"></script>
+		
+		<script src="http://uat.experiencity.co/js/underscore.js"></script>
+		<script src="http://uat.experiencity.co/js/HtmlObjects.js"></script>
+		<script src="http://uat.experiencity.co/js/experiencityUtilitys.js"></script>
+		<script src="http://uat.experiencity.co/js/session/GameSession.js"></script>
+		<script src="http://uat.experiencity.co/js/session/GameSessionManager.js"></script>
+		<script src="http://uat.experiencity.co/js/session/Player.js"></script>
+		<script src="http://uat.experiencity.co/js/session/PlayerManager.js"></script>
+		<script src="http://uat.experiencity.co/js/session/EmbedSession.js"></script>
+		<script src="http://uat.experiencity.co/js/session/jquery.cookie.js"></script>
+		<script src="http://uat.experiencity.co/js/gamesClass.js"></script>
+                     
+        <script src="http://uat.experiencity.co/js/scoreOrienteering/scoreOrienteering.js"></script>
+		<script src="http://uat.experiencity.co/js/scoreOrienteering/scoreOrienteeringService.js"></script>
+		<script src="http://uat.experiencity.co/js/poster/posterEmbed.js"></script>
+		<script src="http://uat.experiencity.co/js/choicegames/ChoiceGameEmbed.js"></script>
+		<script src="http://uat.experiencity.co/js/hotspot.js"></script>
+		<script src="http://uat.experiencity.co/js/stations.js"></script>
+		<script src="http://uat.experiencity.co/js/googleMaps.js"></script>
+        <script src="http://uat.experiencity.co/js/basic.js"></script>
+		<script src="http://uat.experiencity.co/js/functions.js"></script>
+		<script src="http://uat.experiencity.co/js/HtmlObjects.js"></script>
+        <script src="http://uat.experiencity.co/js/embed.js"></script>-->
+
+
+        <link rel="stylesheet" href="http://experiencity.co/css/jquery.mobile-1.3.1.css" />
+        <link rel="stylesheet" href="http://experiencity.co/css/isotope.css" />
+        <link rel="stylesheet" href="http://experiencity.co/css/my.css" />
+
+        <script src="http://experiencity.co/js/jquery.min.js"></script>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.13&amp;libraries=places&amp;sensor=false&libraries=geometry"></script>
+        <script src="http://experiencity.co/js/jquery.mobile-1.3.1.min.js"></script>
+        <script src="http://experiencity.co/js/jquery.isotope.min.js"></script>
+		
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/Convexhull.js"></script>
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/Shape.js"></script> 
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/ShapeMarkersHelper.js"></script> 
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/googleMapsExtensions.js"></script>
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/Line.js"></script>
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/Circle.js"></script>
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/Rectangle.js"></script>
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/Label.js"></script>
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/Polygon.js"></script>
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/Scribble.js"></script>
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/ToolManager.js"></script>
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/GlobalOptions.js"></script>
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/jsonStringify.js"></script>
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/DataManagmentHelper.js"></script>
+		<script type="text/javascript" src="http://experiencity.co/js/scriptsDraw/staticMathMethods.js"></script>
+		<script type="text/javascript" src="http://experiencity.co/js/userCustomOverlay.js"></script>
+		
+		<script src="http://experiencity.co/js/underscore.js"></script>
+		<script src="http://experiencity.co/js/HtmlObjects.js"></script>
+		<script src="http://experiencity.co/js/experiencityUtilitys.js"></script>
+		<script src="http://experiencity.co/js/session/GameSession.js"></script>
+		<script src="http://experiencity.co/js/session/GameSessionManager.js"></script>
+		<script src="http://experiencity.co/js/session/Player.js"></script>
+		<script src="http://experiencity.co/js/session/PlayerManager.js"></script>
+		<script src="http://experiencity.co/js/session/EmbedSession.js"></script>
+		<script src="http://experiencity.co/js/session/jquery.cookie.js"></script>
+		<script src="http://experiencity.co/js/gamesClass.js"></script>
+                     
+        <script src="http://experiencity.co/js/scoreOrienteering/scoreOrienteering.js"></script>
+		<script src="http://experiencity.co/js/scoreOrienteering/scoreOrienteeringService.js"></script>
+		<script src="http://experiencity.co/js/poster/posterEmbed.js"></script>
+		<script src="http://experiencity.co/js/choicegames/ChoiceGameEmbed.js"></script>
+		<script src="http://experiencity.co/js/hotspot.js"></script>
+		<script src="http://experiencity.co/js/stations.js"></script>
+		<script src="http://experiencity.co/js/googleMaps.js"></script>
+        <script src="http://experiencity.co/js/basic.js"></script>
+		<script src="http://experiencity.co/js/functions.js"></script>
+		<script src="http://experiencity.co/js/HtmlObjects.js"></script>
+        <script src="http://experiencity.co/js/embed.js"></script>
+		
+    </head>
+    <body>
+
+		 <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-theme="a" data-role="header">
+                <h1>
+                    ExperienCity
+                </h1>
+            </div>
+			
+			<div data-role="popup" id="popupContentStation" data-overlay-theme="a">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" 
+				data-icon="delete" data-iconpos="notext" class="ui-btn-right">
+					Close
+				</a>
+				<div id="containerPopupStation" data-role="content"></div>	
+			</div>
+			
+			<div  data-overlay-theme="a" data-role="popup" id="popupDescription">
+				<a href="#" data-rel="back" data-role="button" data-theme="a"
+				data-icon="delete" data-iconpos="notext" class="ui-btn-right">
+					Close
+				</a>
+				
+				<div data-role="content" class="ui-content" style="max-width:300px;" >
+					content here
+				</div>
+			</div>
+			
+			<div  data-overlay-theme="a" data-role="popup" id="popupDetailsObjectChoiceGame">	
+				<a href="#" data-rel="back" data-role="button" data-theme="a"
+				data-icon="delete" data-iconpos="notext" class="ui-btn-right">
+					Close
+				</a>				
+				<div data-role="content" class="ui-content" style="text-align: center;">
+					
+				</div>
+			</div>
+			
+			<div id="detailsExperienceContainer">
+				
+				<div class="panelDetails">
+					<div data-role="header" class="ui-header ui-bar-a">
+						<h3 id="titleExperience" style="white-space: normal;word-wrap: break-word;"></h3>
+					</div>
+					<div class="ui-body ui-body-c">
+						<p id="descriptionExperience" style="text-align:justify;"></p>	
+						<div id="containerImg"></div>
+						<div id="boxFilterTags">
+							<div>
+								<h3>Filters by tags</h3>
+							</div>
+							<ul id='ulAllTags'></ul>
+						</div>
+						<div>
+							<a class="startExpButton" href="#" data-theme="a" data-icon="" target="_blank" data-role="button" data-mini="true" style="display:none;">
+								Start
+							</a>
+						</div>
+					</div>
+				</div>
+				
+				<div class="panelMap">
+
+					<div id="containerSingleEmbed">
+						<div data-role="header" class="ui-header ui-bar-a">
+							<h3 role="heading">Stations</h3>
+						</div>
+						<div id="googleMap"></div>
+					</div>
+					
+					<ul id="listSessionOptions" data-role="listview" data-divider-theme="a" data-inset="true" data-theme="c" style="display:none;">
+					    <li data-role="list-divider">Options</li>
+						<li data-icon="false" title="Create new Session"><a data-option="newsession" class="optionSessionGame">Start New Game</a></li>
+			            <li data-icon="false"><a data-option="joinsession" class="optionSessionGame">Join A Game</a></li>
+					</ul>
+
+					<div id="containerGameEmbed" style="display:none;">
+						<div data-role="header" class="ui-header ui-bar-a" role="banner">
+							<h3 role="heading">Game Sessions</h3>
+						</div>
+						<div class="ui-body ui-body-c containerListActiveSessions">
+							<strong style="display: inline-block; margin-bottom: 10px; margin-top: 16px;">
+								Join a session clicking one of them.
+							</strong>
+							<ul id="listActiveSessions" data-role="listview" data-divider-theme="a" data-inset="true" data-count-theme="a">
+								<li data-role="list-divider">Active Sessions</li>
+							</ul>
+							<a class="backSessionOption" data-role="button" data-icon="arrow-l" data-mini="true" style="/*margin-top:10px;*/" data-typeexp='boardgame'>Back</a>
+						</div>
+					</div>
+
+					<ul id="listSessionOptionScoreOrienteering" data-role="listview" data-divider-theme="a" data-inset="true" data-theme="c" style="display:none;">
+						<li data-role="list-divider">Options</li>
+						<li data-icon="false" title="Create new Session">
+							<a data-option="newsession" class="js-score-session-option">
+								Start New Game
+							</a>
+						</li>
+		            <li data-icon="false"><a data-option="joinsession" class="js-score-session-option">Join A Game</a></li>
+					</ul>
+
+					<div id="containerScoreOrienteeringSesion" style="display:none;">
+						<div data-role="header" class="ui-header ui-bar-a" role="banner">
+							<h3 role="heading">Game Sessions</h3>
+						</div>
+						<div class="ui-body ui-body-c containerListActiveSessions">
+							<strong style="display: inline-block; margin-bottom: 10px; margin-top: 16px;">
+								Join a session clicking one of them.
+							</strong>
+							<ul id="listActiveSessionsScoreOrienteering" data-role="listview" data-divider-theme="a" data-inset="true" data-count-theme="a">
+								<li data-role="list-divider">Active Sessions</li>
+							</ul>
+							<a class="backSessionOption" data-role="button" data-icon="arrow-l" data-mini="true" style="/*margin-top:10px;*/" data-typeexp='score'>Back</a>
+						</div>
+					</div>
+
+					<div class="posterStations" style="display:none;">
+						<div data-role="header" class="ui-header ui-bar-a">
+							<h3 role="heading">Stations</h3>
+						</div>
+						<div style="margin-left:25px; max-height:450px; overflow:auto;">
+							<div class="isotopeBox"></div>
+						</div>
+					</div>
+
+					<div class="visitorMediaContent" style="display:none;">
+						<div data-role="header" class="ui-header ui-bar-a">
+							<h3 role="heading">Media stations</h3>
+						</div>
+
+						<div id="visitorsMediaGallery">					
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+			
+			<div id="choiceGameEmbedContent" style="display:none; margin-top: 9px;">
+				<div class="panelChoiceGame">
+					<div data-role="header">
+						<h3 class="titleActivity">
+							Activity Name
+						</h3>
+					</div>
+					<div class="ui-body ui-body-c contentActivity">
+						
+					</div>
+				</div>
+				<div class="panelChoiceGame">
+					<div data-role="header">
+						<h3>
+							Choices
+						</h3>
+					</div>
+					<div class="ui-body ui-body-c contentChoices">
+					</div>
+				</div>
+			</div>
+
+			<div data-role="popup" id="popupCreateJoinSession" class="popupGames" data-overlay-theme="a" data-theme="c">
+				<div data-role="header" data-theme="a">
+					<h1>New Session</h1>
+				</div>
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+					<form id="formCreateJoinSession" class="form-createjoin-session">
+						<div class="ui-body ui-body-f div-error-authenticate" style="font-size:13px; margin-top:-5px; margin-bottom:5px; display:none;">Username or password wrong</div>
+						<fieldset data-role="controlgroup" data-mini="true" style="margin-top: 0px; margin-bottom: 10px;" data-theme="a">
+					        <input type="radio" name="radioActionJoinSession" id="radioNewJoin" checked="checked">
+					        <label for="radioNewJoin">New player</label>
+					        <input type="radio" name="radioActionJoinSession" id="radioAlreadyJoin">
+					        <label for="radioAlreadyJoin">Already joined the session</label>
+					    </fieldset>
+						<label for="inputSessionName">
+							<strong>Session Name</strong>
+						</label>
+						<input type="text" id="inputSessionName" name="nameSession" data-mini="true" placeholder="Name for the session" required="required" />
+						<div class="js-parentInputs">
+							<label for="inputUserName" style="margin-top: 10px;">
+								<strong>Your user name</strong>
+							</label>
+							<input type="text" id="inputUserName" class="js-input-session-user" name="nameUser" 
+							data-mini="true" placeholder="Your nick for the session" required="required" />
+						</div>
+						<div class="js-parentInputs">
+							<label for="inputUserPass" style="margin-top: 10px;">
+								<strong>Your Password</strong>
+							</label>
+							<input type="password" id="inputUserPass" class="js-input-session-pass" 
+							name="password" data-mini="true" placeholder="Password for the session" required="required" />
+						</div>
+
+						<input type="hidden" id="inputHiddenActionForm" class="js-input-hidden-session-action" value="create">
+						<input type="hidden" id="inputHiddenIdSession" class='js-input-hidden-session-id'>
+						<input id="btnCreateSession" class="noActiveButton" type="submit" data-mini="true" data-icon="check" data-theme="a" data-ajax="false" value="Done" data-disabled="false" />
+					</form>
+				</div>
+			</div>
+
+			<div data-role="popup" id="popupCreateJoinSessionScoreOrienteering" class="popupGames" data-overlay-theme="a" data-theme="c">
+				<div data-role="header" data-theme="a">
+					<h1>New Session</h1>
+				</div>
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+					<form class="js-form-createjoin-session-score form-createjoin-session">
+						<div class="ui-body ui-body-f div-error-authenticate" style="font-size:13px; margin-top:-5px; margin-bottom:5px; display:none;">Username or password wrong</div>
+						<fieldset data-role="controlgroup" data-mini="true" style="margin-top: 0px; margin-bottom: 10px;" data-theme="a">
+					        <input type="radio" name="radioActionJoinSessionScore" id="radioNewJoinScore" class="js-radio-session-option" checked="checked">
+					        <label for="radioNewJoinScore">New player</label>
+					        <input type="radio" name="radioActionJoinSessionScore" id="radioAlreadyJoinScore" class="js-radio-session-option">
+					        <label for="radioAlreadyJoinScore">Already joined the session</label>
+					    </fieldset>
+
+						<label for="a" class="js-label-session-name">
+							<strong>Session name</strong>
+						</label>
+						<input type="text" class="js-input-session-name" name="nameSession" data-mini="true" placeholder="Name for the session" required="required" />
+
+						<label for="a" class="js-label-session-time" style="display:block; margin-top: 10px;">
+							<strong>Time limit of session (hh:mm)</strong>
+						</label>
+						<div class='group-inline-two js-group-inline-two'>
+							<input type="number" pattern="[0-9]*" class="js-input-session-time" name="timeLimitHours" value="0" data-mini="true" min="0">
+							<input type="number" pattern="[0-9]*" class="js-input-session-time" name="timeLimitMinutes" value="0" data-mini="true" min="0" max="59">
+						</div>
+
+						<div id="container-timerPicker">
+							<label for="a" class="js-label-session-name">
+								<strong>Start session on:</strong>
+							</label>
+							<input id="dateTimePicker" type="text" name="sessionTimeStart" required="required" readonly />
+							<label for="a" class="js-label-session-name">
+								<strong>Text to show when game end</strong>
+							</label>
+							<textarea name="sessionEndText"></textarea>
+						</div>
+
+						<div class="js-parentInputs">
+							<label for="a" style="display:block; margin-top: 10px;">
+								<strong>Your username</strong>
+							</label>
+							<input type="text" class="js-input-session-user" name="nameUser" data-mini="true" placeholder="Your nick for the session" 	required="required" />
+						</div>
+
+						<div class="js-parentInputs">
+							<label for="a" style="display:block; margin-top: 10px;">
+								<strong>Your password</strong>
+							</label>
+							<input type="password" class="js-input-session-pass" name="password" data-mini="true" placeholder="Password for the session" 	required="required" />
+						</div>
+
+						<input type="hidden" class="js-input-hidden-session-action" value="create">
+						<input type="hidden" class="js-input-hidden-session-id">
+						<input class="noActiveButton" type="submit" data-mini="true" data-icon="check" data-theme="a" data-ajax="false" value="Done" data-disabled="false" />
+					</form>
+				</div>
+			</div>
+
+        </div>
+
+    </body>
+</html>

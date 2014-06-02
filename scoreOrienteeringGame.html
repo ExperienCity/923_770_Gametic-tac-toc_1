@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 	
+	
+	<!--<link rel="stylesheet" href="http://uat.experiencity.co/css/jquery.mobile-1.3.1.css" />
+	<link rel="stylesheet" href="http://uat.experiencity.co/css/my.css" />
+	<script src="http://uat.experiencity.co/js/jquery.min.js"> </script>
+	<script src="http://uat.experiencity.co/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="http://uat.experiencity.co/js/jquery.mobile-1.3.1.min.js"></script>
+	<script src="http://uat.experiencity.co/js/jquery.countdown.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.13&amp;libraries=geometry,places&amp;sensor=false"></script>
+	<script src="http://uat.experiencity.co/js/underscore.js"></script>
+	<script src="http://uat.experiencity.co/js/googleMaps.js"></script>
+	<script src="http://uat.experiencity.co/js/stations.js"></script>
+	<script src="http://uat.experiencity.co/js/session/GameSession.js"></script>
+	<script src="http://uat.experiencity.co/js/session/GameSessionManager.js"></script>
+	<script src="http://uat.experiencity.co/js/session/Player.js"></script>
+	<script src="http://uat.experiencity.co/js/session/PlayerManager.js"></script>
+	<script src="http://uat.experiencity.co/js/gamesClass.js"></script>
+	<script src="http://uat.experiencity.co/js/experiencityUtilitys.js"></script>
+	<script src="http://uat.experiencity.co/js/scoreOrienteering/scoreOrienteeringService.js"></script>
+	<script src="http://uat.experiencity.co/js/scoreOrienteering/scoreOrienteeringGame.js"></script>-->
+
+	<link rel="stylesheet" href="http://experiencity.co/css/jquery.mobile-1.3.1.css" />
+	<link rel="stylesheet" href="http://experiencity.co/css/my.css" />
+	<script src="http://experiencity.co/js/jquery.min.js"> </script>
+	<script src="http://experiencity.co/js/jquery.ui.touch-punch.min.js"></script>
+	<script src="http://experiencity.co/js/jquery.mobile-1.3.1.min.js"></script>
+	<script src="http://experiencity.co/js/jquery.countdown.js"></script>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?v=3.13&amp;libraries=geometry,places&amp;sensor=false"></script>
+	<script src="http://experiencity.co/js/underscore.js"></script>
+	<script src="http://experiencity.co/js/oms.min.js"></script>
+	<script src="http://experiencity.co/js/googleMaps.js"></script>
+	<script src="http://experiencity.co/js/stations.js"></script>
+	<script src="http://experiencity.co/js/session/GameSession.js"></script>
+	<script src="http://experiencity.co/js/session/GameSessionManager.js"></script>
+	<script src="http://experiencity.co/js/session/Player.js"></script>
+	<script src="http://experiencity.co/js/session/PlayerManager.js"></script>
+	<script src="http://experiencity.co/js/gamesClass.js"></script>
+	<script src="http://experiencity.co/js/userCustomOverlay.js"></script>
+	<script src="http://experiencity.co/js/experiencityUtilitys.js"></script>
+	<script src="http://experiencity.co/js/scoreOrienteering/scoreOrienteeringService.js"></script>
+	<script src="http://experiencity.co/js/scoreOrienteering/scoreOrienteeringGame.js"></script>
+	
+</head>
+<body>
+
+	<div data-role="page" id="pageGameRoom">
+		
+		<div data-theme="a" data-role="header" >
+			<h1 style="overflow: visible;">
+				ExperienCity
+			</h1>
+		</div>
+
+		<div class="containerSessionGame" style="margin-top:15px;">
+
+			<div>
+				<div id="msgStatus" style='margin-bottom:5px;'></div>
+				<div id="scoreboardEndGame" class="score-scoreboard-details" style="display:none;"></div>
+			</div>
+
+			<div id="containerSessionCountDown" style="text-align:center;">
+				<p>
+					<b>This Session will start in :</b>
+				</p>
+				<div id="sessionCountDown" class="score-countdown-styled"></div>
+				<div>
+					<b>Invite friends to this game: </b> <br>
+					<div class="invitefriendsLink">
+						link
+					</div>
+				</div>
+			</div>
+
+			<div data-role="header" class="ui-header ui-bar-a hide-nostations" role="banner" style="visibility:hidden;">
+				<h3 id="titleExperience" style="white-space: normal;word-wrap: break-word;"></h3>
+			</div>
+
+			<div  class="ui-body ui-body-c hide-nostations" style="text-align: center;visibility:hidden;">
+
+				<div class="containerGridGame">
+					<div data-role="collapsible" data-theme="a" data-content-theme="b" data-collapsed="false">
+						<h3>Map Game</h3>
+						<div id="googleMap" style="border:1px solid rgba(151, 143, 143, 0.55);"></div>
+					</div>
+				</div>
+
+				<div id="containerSecondaryGameInfo">
+
+					<div data-role="collapsible" data-theme="a" data-content-theme="b" data-collapsed="false" class="scoreOrienteeringPanel">
+						<h3>Game Info</h3>
+						<div class="score-countdown">
+							<strong class='scoreorienteering-strong-title'>COUNTDOWN</strong>
+							<div id="gameCountDown" class="score-countdown-styled"></div>
+						</div>
+						<div class="score-scoreboard">
+							<strong class='scoreorienteering-strong-title'>SCOREBOARD</strong>
+							<div class="score-scoreboard-details"></div>
+						</div>
+
+					</div>
+
+					<div data-role="collapsible" data-theme="a" data-content-theme="b" data-collapsed="false" class="scoreOrienteeringPanel">
+						<h3>Filter by tag</h3>
+						<div>							
+							<div id="filterTags">
+								
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="chatBoxFloat chatBoxFloat-right" style="display:none;">
+			<div data-role="collapsible" data-theme="a" data-content-theme="b" data-collapsed="true">
+				<h3>Chat</h3>
+				<div id="containerChatSession" style="width:100%; height:350px;"></div>
+			</div>
+		</div>
+
+		<div data-role="popup" id="popupClaimStation" class="popupGames" data-overlay-theme="a" data-theme="c">
+			<div data-role="header" data-theme="a">
+				<h1>Claim Station</h1>
+			</div>
+			<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+			<div data-role="content" data-theme="d" class="ui-corner-bottom ui-content">
+				<form id="formClaimStation">
+					<div id="containerErrorClaiming" class="ui-body ui-body-f" style="font-size:13px; margin-top:-5px; margin-bottom:5px; display:none;">Incorrect claiming code</div>
+					<label for="inputUserName" class='hide-alreadyclaimed'>
+						<strong>Station Name</strong>
+					</label>
+					<span id="spanStationName" style="display: block; margin-bottom: 10px;" class='hide-alreadyclaimed'></span>
+					<b>Reward : <span id="stationReward">5</span> points</b>
+					<a id="btnGoCompleteStation" data-role="button" data-theme="b" data-icon="arrow-r" data-mini="true" data-iconpos="right" data-ajax="false" title="Complete station on thewandering.net/" class='hide-alreadyclaimed'>
+			            Complete Station
+			        </a>
+					<label for="inputClaimingCode" style="margin-top: 10px;" class='hide-alreadyclaimed'>
+						<strong>Claiming Code</strong>  
+					</label>
+					<input type="text" id="inputClaimingCode" name="claimingCode" data-mini="true" placeholder="The claiming code for the station" required="required" onkeypress="$('#containerErrorClaiming').hide();" class='hide-alreadyclaimed'>
+
+					<input type="hidden" id="inputHiddenIdStation">
+					<input id="btnClaimStation" type="submit" data-mini="true" data-icon="check" data-theme="a" value="Done" class='hide-alreadyclaimed' />
+				</form>
+			</div>
+		</div>
+
+	</div>
+	
+</body>
+</html>
